@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.grafosFinal.controladores.TipoGrafoController">
+   <children>
+      <Label fx:id="titulo" alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="14.0" prefHeight="48.0" prefWidth="383.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="texto" contentDisplay="CENTER" layoutX="17.0" layoutY="70.0" prefHeight="360.0" prefWidth="859.0" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="texto1" alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="409.0" prefHeight="85.0" prefWidth="842.0" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

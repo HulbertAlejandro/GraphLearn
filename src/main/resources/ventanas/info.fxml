@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.grafosFinal.controladores.InfoControlador">
+    <children>
+        <VBox alignment="CENTER_LEFT" layoutX="105.0" layoutY="48.0" prefHeight="342.0" prefWidth="692.0" spacing="10">
+            <children>
+                <Label text="Esta aplicación proporciona una plataforma para trabajar con grafos," textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="lo que puede ser útil en diversos campos como la informática, las ciencias sociales," textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="las matemáticas aplicadas, entre otros. Puede ser utilizado por estudiantes," textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="investigadores o profesionales. Algunas características y funcionalidades de" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="esta aplicación son: la creación de grafos, visualización gráfica, análisis de grafos," textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="manipulación de grafos, interactividad." textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="Esta aplicación fue desarrollada por Néstor Felipe Castelblanco, Juan Felipe Hurtado," textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="Hulbert Alejandro Arango y Sebastián Agudelo, estudiantes de Ingeniería en Sistemas" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="y Computación de la Universidad del Quindío, para la materia Teoría de Grafos" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+                <Label text="orientada por el profesor Pedro Pablo Cárdenas Alzate, Ph.D" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI" size="18.0" />
+                    </font>
+                    <wrapText>true</wrapText>
+                </Label>
+            </children>
+        </VBox>
+        <Button fx:id="atrasButton" layoutX="416.0" layoutY="427.0" mnemonicParsing="false" onAction="#atras" text="Atrás">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

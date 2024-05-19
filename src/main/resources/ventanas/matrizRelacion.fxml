@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.grafosFinal.controladores.MatrizRelacionController">
+   <children>
+      <Label fx:id="titulo" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="14.0" prefHeight="39.0" prefWidth="383.0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="texto" contentDisplay="CENTER" layoutX="24.0" layoutY="86.0" prefHeight="310.0" prefWidth="852.0" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="texto1" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="366.0" prefHeight="123.0" prefWidth="852.0" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

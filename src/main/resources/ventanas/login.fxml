@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.grafosFinal.controladores.LoginControlador">
+    <children>
+        <ImageView>
+            <image>
+                <Image url="@../imagenes/grafo.png" />
+            </image>
+            <fitWidth>345.0</fitWidth>
+            <fitHeight>330.0</fitHeight>
+            <layoutX>78.0</layoutX>
+            <layoutY>26.0</layoutY>
+        </ImageView>
+        <Button fx:id="infoButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="30.0">
+            <graphic>
+                <ImageView fitHeight="62.0" fitWidth="62.0">
+                    <Image url="@../imagenes/signo.png" />
+                </ImageView>
+            </graphic>
+            <style>
+                -fx-background-color: black;
+            </style>
+        </Button>
+        <Label layoutX="525.0" layoutY="186.0" text="Usuario" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="508.0" layoutY="236.0" text="Contraseña" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="usernameField" layoutX="646.0" layoutY="180.0" prefHeight="35.0" prefWidth="174.0" promptText="Nombre">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="passwordField" layoutX="646.0" layoutY="230.0" prefHeight="35.0" prefWidth="174.0" promptText="Identificación">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </PasswordField>
+        <Button fx:id="loginButton" layoutX="620.0" layoutY="333.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="101.0" text="Entrar">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="registerButton" layoutX="620.0" layoutY="378.0" mnemonicParsing="false" onAction="#register" prefHeight="35.0" prefWidth="101.0" text="Registrar">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="78.0" layoutY="368.0" text="Teoría de Grafos" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="40.0" />
+            </font>
+        </Label>
+        <Separator layoutX="444.0" layoutY="1.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="13.0" />
+        <Label layoutX="577.0" layoutY="102.0" text="Iniciar Sesión" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="30.0" />
+            </font>
+        </Label>
+        <Label layoutX="160.0" layoutY="416.0" text="Aplicación" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Bold" size="30.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

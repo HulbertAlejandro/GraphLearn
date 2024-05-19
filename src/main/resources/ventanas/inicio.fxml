@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.grafosFinal.controladores.InicioControlador">
+    <SplitPane dividerPositions="0.5" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <!-- Panel izquierdo con contenido dinámico -->
+            <VBox>
+                <Pane fx:id="panelGrafo" onMouseClicked="#abrirDialogoAgregarNodo" prefHeight="430.0" prefWidth="446.0" style="-fx-background-color: black;">
+                    <children>
+                        <!-- Espacio para el contenido dinámico del grafo -->
+                    </children>
+                </Pane>
+            </VBox>
+         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+            <children>
+                  <!-- Panel derecho con botones para operaciones con el grafo -->
+                <ImageView>
+                    <image>
+                        <Image url="@../imagenes/grafo.png" />
+                    </image>
+                    <fitWidth>90.0</fitWidth>
+                    <fitHeight>90.0</fitHeight>
+                    <layoutX>178.0</layoutX>
+                    <layoutY>395.0</layoutY>
+                </ImageView>
+                  <VBox alignment="CENTER" layoutX="113.0" layoutY="101.0" spacing="10">
+                      <children>
+                          <Button fx:id="btnMatrizRelacion" onAction="#mostrarMatrizRelacion" prefHeight="29.0" prefWidth="200.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Matriz de Relación" />
+                          <Button fx:id="btnGrafoConexo" onAction="#grafoConexo" prefHeight="29.0" prefWidth="200.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Grafo Conexo" />
+                          <Button fx:id="btnIdentificarTipo" onAction="#identificarTipo" prefHeight="29.0" prefWidth="200.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Identificar Tipo" />
+                          <Button fx:id="btnCircuitoEuleriano" onAction="#mostrarCircuitoEuleriano" prefHeight="29.0" prefWidth="200.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Circuito Euleriano" />
+                          <Button fx:id="btnCircuitoHamiltoniano" onAction="#mostrarCircuitoHamiltoniano" prefHeight="29.0" prefWidth="200.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Circuito Hamiltoniano" />
+                          <Button fx:id="btnIdentificarGrafoHamiltoniano" onAction="#identificarGrafoHamiltoniano" prefHeight="29.0" prefWidth="200.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Grafo Hamiltoniano" />
+                          <Button fx:id="btnMatrizAdyacencia" onAction="#mostrarMatrizAdyacencia" prefHeight="29.0" prefWidth="201.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Matriz de Adyacencia" />
+                      </children>
+                      <padding>
+                          <Insets bottom="10" left="10" right="10" top="10" />
+                      </padding>
+                  </VBox>
+               <Label layoutX="182.0" layoutY="49.0" text="Menú" textFill="WHITE">
+                  <font>
+                     <Font name="Segoe UI Bold" size="30.0" />
+                  </font>
+               </Label>
+            </children>
+         </Pane>
+        </items>
+    </SplitPane>
+    <!-- Botones debajo del panel izquierdo -->
+    <HBox alignment="CENTER" prefHeight="45.0" prefWidth="420.0" spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="470.0">
+        <children>
+            <Button fx:id="btnCrearArista" onAction="#abrirDialogoCrearArista" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Crear Arista" />
+            <Button fx:id="btnEliminarNodo" onAction="#abrirDialogoEliminarNodo" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Eliminar Nodo" />
+            <Button fx:id="btnEliminarArista" onAction="#abrirDialogoEliminarArista" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 16; -fx-font-weight: bold;" text="Eliminar Arista" />
+        </children>
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+    </HBox>
+</AnchorPane>
