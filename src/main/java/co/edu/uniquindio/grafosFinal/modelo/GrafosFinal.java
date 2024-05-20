@@ -17,6 +17,8 @@ import java.util.Objects;
 import java.util.logging.FileHandler;
 import java.util.logging.SimpleFormatter;
 
+//La clase GrafosFinal representa la aplicación principal y gestiona los usuarios.
+//Utiliza el patrón Singleton para asegurar una única instancia.
 @Log
 public class GrafosFinal {
 
@@ -57,7 +59,8 @@ public class GrafosFinal {
         }
         return grafosFinal;
     }
-
+    
+    //Inicializa el logger para registrar eventos en un archivo de log.
     private void inicializarLogger() {
         try {
             FileHandler fh = new FileHandler("logs.log", true);
@@ -67,7 +70,17 @@ public class GrafosFinal {
             log.severe(e.getMessage());
         }
     }
-
+     /**
+     * Registra un nuevo usuario en la aplicación.
+     *
+     * @param identificacion La identificación del usuario.
+     * @param nombre El nombre del usuario.
+     * @param correo El correo electrónico del usuario.
+     * @param telefono El teléfono del usuario.
+     * @return El objeto Usuario registrado.
+     * @throws AtributoVacioException Si algún atributo es nulo o está en blanco.
+     * @throws InformacionRepetidaException Si la identificación o el correo ya están registrados.
+     */
     public Usuario registrarUsuario(String identificacion, String nombre, String correo, String telefono) throws AtributoVacioException, InformacionRepetidaException {
 
         if (identificacion == null || identificacion.isBlank()) {
@@ -105,7 +118,8 @@ public class GrafosFinal {
 
         return usuario;
     }
-
+    
+    //Escribe la lista de usuarios en el archivo de almacenamiento.
     private void escribirUsuario() {
         try {
             ArchivoUtils.serializarObjeto(RUTA_USUARIOS, usuarios);
@@ -133,7 +147,8 @@ public class GrafosFinal {
         }
         return null; // Retorna null si no se encuentra el usuario con el correo electrónico dado
     }
-
+    
+    //Lee la lista de usuarios desde el archivo de almacenamiento.
     private void leerUsuarios() {
         try {
             ArrayList<Usuario> lista = (ArrayList<Usuario>) ArchivoUtils.deserializarObjeto(RUTA_USUARIOS);
@@ -144,7 +159,8 @@ public class GrafosFinal {
             log.severe(e.getMessage());
         }
     }
-
+    
+    //Verifica las credenciales de un usuario.
     public boolean verificarCredenciales(String identificacion, String nombre) {
         for (Usuario usuario : usuarios) {
             if (identificacion.equals(usuario.getIdentificacion()) && nombre.equals(usuario.getNombre())) {
@@ -153,7 +169,8 @@ public class GrafosFinal {
         }
         return false; // Retorna false si no se encuentra ningún usuario con los datos dados
     }
-
+    
+    //Carga una nueva escena en la aplicación.
     public void loadStage(String url, Event event) {
 
         try {
