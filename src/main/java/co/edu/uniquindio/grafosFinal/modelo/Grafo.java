@@ -70,7 +70,7 @@ public class Grafo {
     //Obtiene el circuito Euleriano del grafo, si existe.
     public String getCircuitoEuleriano() {
         if (!isEuleriano()) {
-            return "El grafo no tiene circuito Euleriano.";
+            return "El grafo no tiene circuito Euleriano porque no cumple con la condición de que todos sus nodos deben tener grado par.";
         } else {
             List<Nodo> circuito = new ArrayList<>();
             Deque<Nodo> stack = new ArrayDeque<>();
