@@ -1,8 +1,9 @@
 package co.edu.uniquindio.grafosFinal.modelo;
 
 public class Arista {
-
+    // Nodo de inicio de la arista
     private Nodo nodoInicio;
+    // Nodo de fin de la arista
     private Nodo nodoFin;
 
     public Arista(Nodo nodoInicio, Nodo nodoFin) {
@@ -18,6 +19,8 @@ public class Arista {
         return nodoFin;
     }
 
+    //Verifica si esta arista conecta los nodos dados.
+    //True si la arista conecta los nodos dados, false en caso contrario.
     public boolean conectaCon(Nodo nodo, Nodo otroNodo) {
         // Verificar si esta arista conecta los nodos dados
         return (nodoInicio == nodo && nodoFin == otroNodo) || (nodoInicio == otroNodo && nodoFin == nodo);
