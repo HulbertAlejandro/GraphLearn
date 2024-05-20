@@ -2,6 +2,7 @@ package co.edu.uniquindio.grafosFinal.modelo;
 
 import java.util.*;
 
+//La clase Grafo representa un grafo no dirigido con nodos y aristas.
 public class Grafo {
     private List<Nodo> nodos;
     private List<Arista> aristas;
@@ -10,11 +11,11 @@ public class Grafo {
         nodos = new ArrayList<>();
         aristas = new ArrayList<>();
     }
-
+    //Agrega un nodo al grafo.
     public void agregarNodo(Nodo nodo) {
         nodos.add(nodo);
     }
-
+    //Agrega una arista al grafo.
     public void agregarArista(Arista arista) {
         aristas.add(arista);
     }
@@ -26,7 +27,9 @@ public class Grafo {
     public List<Arista> getAristas() {
         return aristas;
     }
-
+    
+    //Verifica si el grafo es conexo.
+    //true si el grafo es conexo, false en caso contrario.
     public boolean isGraphConnected() {
         if (nodos.isEmpty()) {
             return false;
@@ -37,7 +40,9 @@ public class Grafo {
 
         return visitedNodes.size() == nodos.size();
     }
-
+    //Realiza una búsqueda en profundidad (DFS) en el grafo.
+    //visitedNodes el conjunto de nodos visitados.
+    
     private void dfs(Nodo nodo, Set<Nodo> visitedNodes) {
         visitedNodes.add(nodo);
 
@@ -54,7 +59,7 @@ public class Grafo {
             }
         }
     }
-
+    //Proporciona una justificación sobre la conexidad del grafo.
     public String getConexityJustification(boolean isConnected) {
         if (isConnected) {
             return "El grafo es conexo porque hay un camino entre cada par de nodos.";
@@ -62,7 +67,7 @@ public class Grafo {
             return "El grafo no es conexo porque hay al menos un par de nodos que no están conectados.";
         }
     }
-
+    //Obtiene el circuito Euleriano del grafo, si existe.
     public String getCircuitoEuleriano() {
         if (!isEuleriano()) {
             return "El grafo no tiene circuito Euleriano.";
@@ -94,7 +99,8 @@ public class Grafo {
             return "Circuito Euleriano: " + sb;
         }
     }
-
+    
+    //Construye un mapa de adyacencia para el grafo.
     private Map<Nodo, List<Nodo>> buildAdjacencyMap() {
         Map<Nodo, List<Nodo>> adjacencyMap = new HashMap<>();
         for (Arista arista : aristas) {
@@ -103,7 +109,7 @@ public class Grafo {
         }
         return adjacencyMap;
     }
-
+    //Verifica si el grafo tiene un circuito Euleriano.
     private boolean isEuleriano() {
         for (Nodo nodo : nodos) {
             int grado = 0;
@@ -118,7 +124,8 @@ public class Grafo {
         }
         return true;
     }
-
+    
+    //Obtiene el circuito Hamiltoniano del grafo, si existe.
     public String getCircuitoHamiltoniano() {
         if (!isHamiltoniano()) {
             return "El grafo no tiene circuito Hamiltoniano.";
@@ -136,7 +143,15 @@ public class Grafo {
             return "Circuito Hamiltoniano: " + sb.toString();
         }
     }
-
+        /**
+     * Encuentra un circuito Hamiltoniano en el grafo.
+     *
+     * @param start el nodo de inicio.
+     * @param current el nodo actual.
+     * @param visited el conjunto de nodos visitados.
+     * @param circuit la lista de nodos en el circuito.
+     * @return true si se encuentra un circuito Hamiltoniano, false en caso contrario.
+     */
     private boolean findHamiltonianCircuit(Nodo start, Nodo current, Set<Nodo> visited, List<Nodo> circuit) {
         circuit.add(current);
         visited.add(current);
@@ -167,7 +182,8 @@ public class Grafo {
         visited.remove(current);
         return false;
     }
-
+    
+    //Justifica si el grafo es Hamiltoniano o no.
     public String justificarGrafoHamiltoniano() {
         if (!isHamiltoniano()) {
             StringBuilder justificacion = new StringBuilder("El grafo no es Hamiltoniano debido a: ");
@@ -221,7 +237,7 @@ public class Grafo {
             return "El grafo es Hamiltoniano porque cumple con las condiciones necesarias.";
         }
     }
-
+    //Verifica si el grafo es bipartito.
     public boolean isBipartito() {
         Set<Nodo> conjuntoA = new HashSet<>();
         Set<Nodo> conjuntoB = new HashSet<>();
@@ -291,7 +307,8 @@ public class Grafo {
         // Si pasa todas las condiciones, el grafo es Hamiltoniano
         return true;
     }
-
+    
+    //Obtiene los vecinos de un nodo en el grafo.
     private Set<Nodo> getVecinos(Nodo nodo) {
         Set<Nodo> vecinos = new HashSet<>();
         for (Arista arista : aristas) {
@@ -303,7 +320,8 @@ public class Grafo {
         }
         return vecinos;
     }
-
+    
+    //Identifica el tipo de grafo (conexo, Euleriano, Hamiltoniano, bipartito).
     public String identificarTipo() {
         StringBuilder tipo = new StringBuilder();
 
@@ -344,7 +362,8 @@ public class Grafo {
 
         return tipo.toString();
     }
-
+    
+    //Obtiene la matriz de adyacencia del grafo.
     public String getMatrizAdyacencia() {
         int size = nodos.size();
         int[][] matriz = new int[size][size];
