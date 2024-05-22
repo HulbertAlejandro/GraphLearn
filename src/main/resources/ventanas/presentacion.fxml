@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.grafosFinal.controladores.PresentacionControlador">
+    <children>
+        <Button fx:id="atrasButton" layoutX="377.0" layoutY="451.0" mnemonicParsing="false" onAction="#atras" prefHeight="35.0" prefWidth="146.0" text="Continuar">
+            <font>
+                <Font name="Segoe UI Bold" size="18.0" />
+            </font>
+        </Button>
+      <Pane layoutX="36.0" layoutY="31.0" prefHeight="395.0" prefWidth="295.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="410.0" fitWidth="295.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Uniqlog.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="347.0" layoutY="31.0" prefHeight="395.0" prefWidth="511.0" style="-fx-background-color: FFFFFF; -fx-background-radius: 10;">
+         <children>
+            <Label alignment="CENTER" layoutX="22.0" layoutY="7.0" prefHeight="27.0" prefWidth="475.0" text="Proyecto Final de Teoria de Grafos">
+               <font>
+                  <Font name="Segoe UI Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="136.0" prefHeight="27.0" prefWidth="439.0" text="Realizado por:">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="170.0" prefHeight="27.0" prefWidth="439.0" text="Néstor Felipe Castelblanco">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="203.0" prefHeight="27.0" prefWidth="439.0" text="Hulbert Alejandro Arango">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="237.0" prefHeight="27.0" prefWidth="439.0" text="Sebastian Agudelo Mendez">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="269.0" prefHeight="27.0" prefWidth="439.0" text="Juan Felipe Hurtado">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="313.0" prefHeight="27.0" prefWidth="439.0" text="Presentado a:">
+               <font>
+                  <Font name="Segoe UI Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="346.0" prefHeight="27.0" prefWidth="439.0" text="Pedro Pablo Cárdenas Alzate, Ph.D">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="48.0" prefHeight="27.0" prefWidth="439.0" text="Universidad del Quindio">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="75.0" prefHeight="27.0" prefWidth="439.0" text="Facultad de Ingenieria ">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="102.0" prefHeight="27.0" prefWidth="439.0" text="Ingenieria de Sistemas y Computación">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

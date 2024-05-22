@@ -2,6 +2,7 @@ package co.edu.uniquindio.grafosFinal.controladores;
 
 import co.edu.uniquindio.grafosFinal.modelo.Arista;
 import co.edu.uniquindio.grafosFinal.modelo.Grafo;
+import co.edu.uniquindio.grafosFinal.modelo.GrafosFinal;
 import co.edu.uniquindio.grafosFinal.modelo.Nodo;
 
 import javafx.event.ActionEvent;
@@ -24,7 +25,7 @@ import java.net.URL;
 import java.util.*;
 
 public class InicioControlador implements Initializable{
-
+    private final GrafosFinal grafosFinal = GrafosFinal.getInstance();
     private Grafo grafo;
 
     @FXML
@@ -528,5 +529,9 @@ public class InicioControlador implements Initializable{
     public void initialize(URL url, ResourceBundle resourceBundle) {
         grafo = new Grafo();
         mapaAngulo = new HashMap<>();
+    }
+
+    public void info(ActionEvent actionEvent) {
+        grafosFinal.loadStage("/ventanas/infoAplicacion.fxml", actionEvent);
     }
 }
