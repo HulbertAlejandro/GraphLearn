@@ -3,6 +3,7 @@ package co.edu.uniquindio.grafosFinal.modelo;
 import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
+
 /**
  * La clase Usuario representa a un usuario con identificaciones básicas.
  * Utiliza la librería Lombok para generar los métodos equals y hashCode automáticamente.
@@ -15,6 +16,14 @@ public class Usuario implements Serializable {
     private String correo;
     private String telefono;
 
+    /**
+     * Constructor de la clase Usuario.
+     *
+     * @param identificacion La identificación del usuario.
+     * @param nombre         El nombre del usuario.
+     * @param correo         El correo electrónico del usuario.
+     * @param telefono       El teléfono del usuario.
+     */
     public Usuario(String identificacion, String nombre, String correo, String telefono) {
         this.identificacion = identificacion;
         this.nombre = nombre;
@@ -23,6 +32,7 @@ public class Usuario implements Serializable {
     }
 
     // Getters y setters
+
     public String getIdentificacion() {
         return identificacion;
     }
@@ -54,7 +64,12 @@ public class Usuario implements Serializable {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    //Devuelve una representación en forma de cadena del objeto Usuario.
+
+    /**
+     * Devuelve una representación en forma de cadena del objeto Usuario.
+     *
+     * @return La representación en forma de cadena del objeto Usuario.
+     */
     @Override
     public String toString() {
         return "Usuario{" +

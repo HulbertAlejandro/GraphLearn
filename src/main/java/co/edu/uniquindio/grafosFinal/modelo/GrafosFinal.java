@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 //La clase GrafosFinal representa la aplicación principal y gestiona los usuarios.
@@ -37,6 +38,7 @@ public class GrafosFinal {
      */
     private ArrayList<Usuario> usuarios;
 
+    private final Logger log = Logger.getAnonymousLogger();
     private GrafosFinal() {
         inicializarLogger();
         log.info("Se crea una nueva instancia de la aplicacion");

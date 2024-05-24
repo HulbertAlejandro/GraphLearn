@@ -5,9 +5,16 @@ import javafx.scene.control.TextArea;
 
 import java.util.List;
 
-//La clase Matriz proporciona métodos para generar y obtener la representación textual de la matriz de relación de un grafo.
+/**
+ * La clase Matriz proporciona métodos para generar y obtener la representación textual de la matriz de relación de un grafo.
+ */
 public class Matriz {
-    //Obtiene la matriz de relación de un grafo y la representa como una cadena de texto.
+    /**
+     * Obtiene la matriz de relación de un grafo y la representa como una cadena de texto.
+     *
+     * @param grafo El grafo del cual se desea obtener la matriz de relación.
+     * @return La representación textual de la matriz de relación del grafo.
+     */
     public static String obtenerMatrizRelacion(Grafo grafo) {
         // Generar la matriz de relación del grafo
         int[][] matrizRelacion = generarMatrizRelacion(grafo);
@@ -36,8 +43,13 @@ public class Matriz {
         // Devolver la cadena de texto que representa la matriz
         return cadenaMatriz.toString();
     }
-    
-    //Genera la matriz de relación de un grafo.
+
+    /**
+     * Genera la matriz de relación de un grafo.
+     *
+     * @param grafo El grafo del cual se desea generar la matriz de relación.
+     * @return La matriz de relación del grafo.
+     */
     private static int[][] generarMatrizRelacion(Grafo grafo) {
         List<Nodo> nodos = grafo.getNodos();
         int n = nodos.size();
